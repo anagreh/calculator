@@ -1,0 +1,120 @@
+body, html {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F8FF;
+
+}
+
+@media (max-width:400px) {
+    body {
+        width:400px;
+        flex-shrink: 0;
+    }
+}
+@media (max-height:500px) {
+    body {
+        height: 500px; 
+        flex-shrink: 0;
+    }
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 40%;
+}
+
+.output{
+    height: 100px;
+    border-radius:1em 1em 0em 0em;
+    border: 1px  solid black;
+    padding: 1em;
+    margin-bottom: .25em;
+
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	/* padding:6px 24px; */
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.buttons {
+    display: grid;
+    height: 100%;
+    grid-template-columns:  repeat(4,1fr);
+    grid-template-rows:     repeat(5,1fr);
+    gap: 5px 5px;
+
+}
+.buttons > button {
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    background-color:#ededed;
+    border-radius:6px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    color:#777777;
+    font-family:Arial;
+    font-size:80%;
+    font-weight:bold;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+}
+.buttons > button:hover {
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color:#dfdfdf;
+}
+
+
+
+
+#equal{
+    grid-row: 4/6;
+    grid-column: 4/5;
+}
+#zero{
+    grid-row: 5/6;
+    grid-column: 1/2;
+}
+#plus{
+    grid-row: 2/4;
+    grid-column: 4/5;
+}
+#equal{
+    grid-row: 4/6;
+    grid-column: 4/5;
+}
+
+.bottom-frame{
+    /* border: 1px  solid black; */
+    display: flex;
+    flex-direction:column-reverse;
+    margin-top: .25rem;
+    height: 3rem;
+    border-radius:0em 0em 1rem 1rem;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    background-color:#ededed;
+    border:1px solid #dcdcdc;
+    color:#777777;
+    font-family:Arial;
+    font-size:.5em;
+    font-weight:bold;
+    text-align: center;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+
+}
